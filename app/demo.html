@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Demo</title>
+<script src="//ajax.googleapis.com/ajax/libs/angularjs/1.5.3/angular.min.js"></script>
+  <script src="demoScript.js"></script>
+</head>
+<body ng-app="demo" ng-controller="DemoController">
+    <h3>rn-stepper demo (5/5)</h3>
+    <form name="form" >
+        Model value : {{ rating }}<br>
+        Min value: <input type="text" size="3" ng-model="minRating"><br>
+        Max value: <input type="text" size="3" ng-model="maxRating"><br>
+        Form has been modified : {{ form.$dirty }}<br>
+        Form is valid : {{ form.$valid }}
+        <hr>
+        <div min="minRating" max="maxRating" ng-model="rating" rn-stepper></div>
+    </form>
+</body>
+</html>

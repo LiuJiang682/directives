@@ -1,0 +1,6 @@
+<button ng-disabled="isOverMin()" ng-click="decrement()">-</button>
+<div id="value1">{{ value }}</div>
+<button ng-disabled="isOverMax()" ng-click="increment()">+</button>
+<div>
+BSB: <input id="bsb" type="text" ng-model="bsb" ng-disabled="isOverMaxLen()"/>
+</div>

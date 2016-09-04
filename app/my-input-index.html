@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Input length restriction</title>
+<script src="//ajax.googleapis.com/ajax/libs/angularjs/1.5.3/angular.min.js"></script>
+   <script src="inputLenRestrictScript.js"></script>
+</head>
+<body ng-app="inputLenStrictDemo" ng-controller="inputLenStrictDemoController">
+    <h3>Input restriction</h3>
+    <!--  <form name="form" >
+        
+        <div min="min" max="max" ng-model="bsb" my-inputlenstrictor></div>
+    </form> -->
+    
+    BSB: <my-inputlenstrictor min="0" max="3" ng-model="bsb" ></my-inputlenstrictor>
+    
+    <hr>
+    BSB: {{bsb}}
+    
+</body>
+</html>

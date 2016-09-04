@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Add Input Restrictor</title>
+
+<script src="//ajax.googleapis.com/ajax/libs/angularjs/1.5.3/angular.min.js"></script>
+  <script src="bsb.js"></script>
+</head>
+<body ng-app="myModule" ng-controller="myController">
+    <bsb ng-model="inputValue"></bsb> 
+    <!--  <div bsb ng-model="inputValue"></div> -->
+    <!--  <input type="text"  ng-model="inputValue" bsb> --> 
+    <!--  <div ng-controller="myController">
+        <bsb/>
+    </div> -->
+    
+    <hr>
+    {{inputValue}}
+</body>
+</html>

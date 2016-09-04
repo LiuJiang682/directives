@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>My Bank Details</title>
+<script src="//ajax.googleapis.com/ajax/libs/angularjs/1.5.3/angular.min.js"></script>
+    <script src="bd.js"></script>  
+    <script src="ReusableInputStrictor.js"></script>
+</head>
+<body ng-app="bankDetailsf" ng-controller="bankDetailsControllerf">
+    BSB: <input type="text" ng-model="bsb" max="6" permittedChars="0-9" input-limitedlength input-restrictor >
+    </br>
+    Account Number: <input type="text", ng-model="accountNumber", max="16" permittedChars="0-9" input-limitedlength input-restrictor> 
+    <!--  <my-bankDetailsf ng-model="bankDetailsf"></my-bankDetailsf> -->
+    <!--  <div my-bankDetailsf ng-model="bankDetailsf" ></div> -->
+    <!-- <hr>
+     BSB: {{bankDetailsf.bsb}}
+    </br>
+    Acount Number: {{bankDetailsf.accountNumber}} -->
+    <hr>
+    {{bsb}}
+    </br>
+    {{accountNumber}}
+</body>
+</html>

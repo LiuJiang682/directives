@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Dom Manipulates</title>
+
+<script src="//ajax.googleapis.com/ajax/libs/angularjs/1.5.3/angular.min.js"></script>
+  <script src="script.js"></script>
+</head>
+<body ng-app="docsTimeDirective">
+    <div ng-controller="Controller">
+        Date format: <input ng-modle="format"> <hr/>
+        Current time is: <span my-current-time="format"></span>
+    </div>
+</body>
+</html>

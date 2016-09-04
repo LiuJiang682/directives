@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>My Bank Details</title>
+<script src="//ajax.googleapis.com/ajax/libs/angularjs/1.5.3/angular.min.js"></script>
+    <script src="bankDetailsScript.js"></script>  
+    <!-- <script src="bd.js"></script> --> 
+</head>
+<body ng-app="bankDetails" ng-controller="bankDetailsController">
+    <h3>My Bank Details</h3>
+    
+    <my-bankDetails bsbmin="0" bsbmax="3" accountnumbermax="6" ng-model="bankDetails" ></my-bankDetails>
+    
+    <hr>
+    BSB: {{bankDetails.bsb}}
+    </br>
+    Acount Number: {{bankDetails.accountNumber}}
+    
+</body>
+</html>

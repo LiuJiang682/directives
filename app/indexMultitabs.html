@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Directive multi-tabs communicate</title>
+
+<script src="//ajax.googleapis.com/ajax/libs/angularjs/1.5.3/angular.min.js"></script>
+  <script src="scriptMultitabs.js"></script>
+</head>
+<body ng-app="docsTabsExample">
+    <my-tabs>
+    <my-pane title="Hello">
+        <p>Lorem ipsum dolor amet</p>
+    </my-pane>
+    <my-pane title="World">
+        <em>Mauris Elementum elementum enim at suscipit.</em>
+        <p><a href ng-click="i = i + 1">counter: {{i || 0}}</a></p>
+    </my-pane>
+    </my-tabs>
+</body>
+</html>

@@ -1,0 +1,43 @@
+<section class="row" ng-app="3wksformFlickr" ng-controller="3wksController">
+  <h1>Search Images from Flickr API via REST with Json format</h1>
+  <article class="col-md-push-1 col-md-11">
+    <div class="app-container">
+      <fieldset class="app-fieldset">
+
+        <form name="form" class="validate-form">
+          Keyword: <input id="searchCriteria"
+                 ng-model="searchCriteria.keyword"
+                 ng-target="form.keyword"
+                 name=" keyword"
+                 type="text"
+                 title="required input"
+                 placeholder="Enter key words (author/tagmode/tags) separated by a comma."
+                 required />
+          <br />
+          Search Mode:
+          <input type="radio" id="searchMode" name="SearchMode" ng-model="searchCriteria.searchMode"
+                 ng-target="form.keyword" value="author" />Author
+          <input type="radio" id="searchMode" name="SearchMode" ng-model="searchCriteria.searchMode"
+                 ng-target="form.keyword" value="tagmode" />Tagmode
+          <input type="radio" id="searchMode" name="SearchMode" ng-model="searchCriteria.searchMode"
+                 ng-target="form.keyword" value="tags" ng-checked="true"  />Tags
+          <br />
+          <input type="button" class="btn btn-default" ng-click="resetForm(form);" value="Reset" />
+          <button type="submit" class="btn btn-primary" ng-click="search(searchCriteria);document.getElementsByName('tags').focus();">
+            Search Flicker
+          </button>
+        </form>
+      </fieldset>
+
+    </div>
+    <div id="message"></div>
+    <div id="images" class="app-container">
+      <h3 ng-show="images.items.length > 0">
+        {{images.title}}
+      </h3>
+      <figure class="added-fig" ng-repeat="i in images.items">
+        <img class="added-img" src="{{i.media.m}}" />
+        <figcaption class="added-cap">{{i.title}}</figcaption>
+      </figure>
+    </div>
+</section>
