@@ -1,0 +1,54 @@
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Monash Picture Search</title>
+  <script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular.min.js"></script>
+  <script src="Monash.js"></script>
+  <link rel="stylesheet" type="text/css" href="Monash.css">
+</head>
+<body class="row" ng-app="monashApp" ng-controller="monashController" >
+  <h1>Monash Picture Search</h1>
+    <div class="app-container">
+        <form name="monashForm" class="validate-form">
+            <div class="search-block">
+                <input id="criteria"
+                 ng-model="criteria.keyword"
+                 ng-target="monashForm.keyword"
+                 name=" keyword"
+                 type="text"
+                 title="required input"
+                 placeholder="Power by Flickr. Enter key words (author/tagmode/tags) separated by a comma."
+                 required />
+            </div>
+          
+         
+          <h3>Search
+          <input type="radio" id="searchMode" name="SearchMode" ng-model="criteria.searchMode"
+                  value="any" />Any Tags
+          <input type="radio" id="searchMode" name="SearchMode" ng-model="criteria.searchMode"
+                  value="all" ng-checked="true"  />ALL Tags
+          </h3>
+          <br />
+          <input type="button" class="btn btn-default" ng-click="resetForm(monashForm);" value="Reset" />
+          <button type="submit" class="btn btn-primary" ng-click="search(criteria);document.getElementsByName('tags').focus();">
+            Search
+          </button>
+        </form>
+    </div>
+  
+    <div id="images" class="container">
+     
+    
+      <h3 ng-show="images.items.length > 0">
+        {{images.title}}
+      </h3>
+        <div class="image row" ng-repeat="i in images.items">
+          <div>
+            <img class= "image block" data-placement="bottom" ng-src="{{i.media.m}}" ng-click="showImage(i.media.m, i.description)"/>
+          </div>  
+          <di><span class="title stand">{{i.author}}</span></di>
+        </div> 
+      </ul>
+    </div> 
+</body>
+</html>
